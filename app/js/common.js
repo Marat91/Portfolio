@@ -78,6 +78,28 @@ $(function() {
 		});
 		return false;
 	});
+	$('.partners').owlCarousel({
+		loop: true,
+		smartSpeed: 700,
+		dots: false,
+		nav: true,
+		responsiveClass: true,
+		navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			},
+			992: {
+				items: 3
+			},
+			1200: {
+				items: 4
+			}
+		}
+	});
 
 	function onResize(){
 		$('.carousel-services-content').equalHeights();
