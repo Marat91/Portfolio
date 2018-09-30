@@ -62,6 +62,23 @@ $(function() {
 		ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
 	});
 	$('select').selectize();
+
+
+		//scroll
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > $(this).height()){
+				$('.top').addClass('active');
+			} else {
+				$('.top').removeClass('active');
+			}
+		});
+		//scroll active
+		$('.top').click(function(){
+			$('html,body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+		});
+
+
+		//e-mail Ajax send
 		$("form.callback").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
@@ -106,3 +123,7 @@ $(function() {
 	}onResize();
 	window.onresize = function() {onResize()};
 });
+//preloader
+    $(window).on('load', function() {
+    	$('.preloader').delay(1000).fadeOut('slow');
+    });
