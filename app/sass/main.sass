@@ -108,7 +108,8 @@ body
 		transform: scale(1);
 	
 		
-
+.text-center
+	text-align: center
 .logo
 	img
 		width: 125px
@@ -568,6 +569,67 @@ select
 				padding: 10px 22px
 				&.active
 					background-color: lighten($accent, 15)
+
+.reviews
+	text-align: center
+.owl-dots
+	width: 100%
+	text-align: center
+	margin-top: 60px
+	button.owl-dot
+		width: 8px
+		height: 8px
+		background-color: #fff
+		border-radius: 10em
+		display: inline-block
+		margin: 5px
+		transition: background-color .5s ease, transform .5s ease
+		&.active
+			background-color: $accent
+			transform: scale(1.3)
+
+.review
+	margin-top: 20px
+	&-header
+		font-family: 'Times New Roman', serif
+		font-style: italic
+		font-size: 30px
+		font-weight: bold
+	&-date
+		font-family: 'Times New Roman', serif
+		font-style: italic
+		font-size: 15px
+		color: #888
+	&-stars
+		margin: 15px 0 35px
+		font-size: 14px
+		color: $accent
+		.fas
+			margin: 0 2.5px
+	&-text
+		color: #95989a
+
+
+.quotes
+	position: absolute
+	width: 100%
+	&::before, &::after
+		content: ',,'
+		position: absolute
+		top: 170px
+		font-size: 56px
+		color: $accent
+		font-family: 'Times New Roman', serif
+		font-weight: bold
+		line-height: 0
+		transform: rotate(180deg)
+		display: block
+	&::before
+		top: 210px
+		left: -60px
+	&::after
+		right: -60px
+		transform: rotate(0)
 
 
 .success

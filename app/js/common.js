@@ -62,7 +62,14 @@ $(function() {
 		ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
 	});
 	$('select').selectize();
-
+	//otziv
+		$('.reviews').owlCarousel({
+			loop: true,
+			items: 1,
+			smartSpeed: 700,
+			nav: false,
+			autoHeight: true
+		});
 
 		//scroll
 		$(window).scroll(function() {
